@@ -27,12 +27,15 @@ const cambiarTema = () => {
 };
 
 const theme = document.querySelector(".theme");
-
 theme.addEventListener("click", cambiarTema);
 
 const hambur = document.querySelector(".fa-bars");
-const navUl = document.getElementById("navUl");
+const navUl2 = document.querySelector(".navUl2");
 
 hambur.addEventListener("click", () => {
-  navUl.classList.toggle("displayOff");
+  navUl2.classList.toggle("displayOn");
+});
+
+window.addEventListener("resize", () => {
+  navUl2.classList.remove("displayOn");
 });
